@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #020202;
+}
+
+header {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    background: #020202;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+}
+
+nav li {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    width: 60vw;
+    max-width: 900px;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.nav-links li:hover {
+    color: rgb(95, 95, 95);
+}
+
+.social-media-links {
+    display: none;
+}
+
+.burger-container {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+  
+.line {
+    width: 20px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+  
+.two {
+    opacity: 1;
+}
+
+.logo {
+    width: 150px;
+    filter: invert(1);
+    margin: 20px 0 20px 40px;
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 10px;
+}
+
+.landing {
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Media/SN-group.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 60px;
+    position: relative;
+    top: 10px;
+}
+
+.intro h1 {
+    font-size: 80px;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+}
+
+.intro h1 span {
+    color: #CC2936;
+}
+
+.intro h2 {
+    font-size: 22px;
+    line-height: 2.5rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.arrow-container {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 2.5rem;
+    color: #020202;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {color: #020202}
+    50% {color: white}
+    100% {color: #020202}
+}
+
+.arrow-container a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+    .logo {
+        width: 120px;
+        margin: 8px 0 8px 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .intro h1 {
+        font-size: 60px;
+    }
+
+    .intro h2 {
+        font-size: 20px;
+    }
+    
+    body {
+        overflow-y: hidden;
+    }
+    
+    .burger-container {
+        display: block;
+    }
+
+    nav {
+        height: 98px;
+        width: 100vw;
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        height: 30px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .social-media-links {
+        display: flex;
+    }
+
+    .social-media-links a {
+        margin: 0 10px;
+    }
+
+    .nav-active {
+        height: 100vh;
+        transform: translateY(0%);
+        background: #020202;
+    }
+    
+    .line-drop-left {
+        transform: rotate(-360deg);
+        position: relative;
+        top: 3px;
+        background: #CC2936;
+    }
+    
+    .line-drop-right {
+        transform: rotate(360deg);
+        position: relative;
+        bottom: 3px;
+        background: #CC2936;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    nav {
+        height: 78px;
+    }
+
+    .intro {
+        margin: 0 30px;
+    }
+
+    .intro h1 {
+        font-size: 50px;
+    }
+
+    .intro h2 {
+        font-size: 17px;
+    }
+
+    .logo {
+        width: 90px;
+        margin: 8px 0 8px 20px;
+    }
+
+    .burger-container {
+        top: 25px;
+    }
+}
